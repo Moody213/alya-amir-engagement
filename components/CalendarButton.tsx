@@ -14,6 +14,7 @@ export function CalendarButton() {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-haspopup="true"
+        suppressHydrationWarning
         className="inline-flex items-center gap-2 text-xs uppercase tracking-widest-2 text-gold underline decoration-gold-muted underline-offset-4 transition-colors hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         <CalendarPlus className="h-4 w-4" strokeWidth={1.25} aria-hidden="true" />
@@ -40,6 +41,7 @@ export function CalendarButton() {
               downloadIcsFile();
               setOpen(false);
             }}
+            suppressHydrationWarning
             className="block w-full px-4 py-2 text-left text-xs uppercase tracking-wider text-ink hover:bg-background-alt"
           >
             Apple / Outlook (.ics)

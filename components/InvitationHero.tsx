@@ -42,6 +42,7 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
             <motion.button
               type="button"
               onClick={onOpen}
+              suppressHydrationWarning
               className="group relative mt-2 flex cursor-pointer items-center justify-center rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               animate={
                 shouldReduceMotion

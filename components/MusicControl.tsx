@@ -58,6 +58,7 @@ export function MusicControl({ armed }: { armed: boolean }) {
         onClick={toggle}
         aria-label={isPlaying ? "Turn music off" : "Turn music on"}
         aria-pressed={isPlaying}
+        suppressHydrationWarning
         className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-gold-muted bg-cream/90 text-gold shadow-sm backdrop-blur transition-colors hover:border-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         {isPlaying ? (

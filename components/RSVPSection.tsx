@@ -120,6 +120,7 @@ export function RSVPSection({
                   }}
                   aria-invalid={Boolean(nameError)}
                   aria-describedby={nameError ? "guestName-error" : undefined}
+                  suppressHydrationWarning
                   className="mt-2 w-full border-0 border-b border-line bg-transparent py-2 font-serif text-lg text-ink placeholder:text-text-muted/60 focus:border-gold focus:outline-none"
                   placeholder="Full name"
                 />
@@ -157,6 +158,7 @@ export function RSVPSection({
               <button
                 type="submit"
                 disabled={isSubmitting}
+                suppressHydrationWarning
                 className="mt-2 flex items-center justify-center gap-2 border border-ink py-3 text-xs uppercase tracking-widest-2 text-ink transition-colors hover:bg-ink hover:text-cream disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {isSubmitting && (
@@ -186,6 +188,7 @@ function AttendanceOption({
       type="button"
       onClick={onSelect}
       aria-pressed={selected}
+      suppressHydrationWarning
       className={`flex items-center justify-between border px-5 py-3 text-left text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
         selected
           ? "border-gold bg-gold/10 text-ink"
