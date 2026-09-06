@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #f3eadc;
+  --color-background-alt: #f8f3ea;
+  --color-cream: #fdfaf4;
+  --color-ink: #1d1a17;
+  --color-gold: #b29b49;
+  --color-gold-muted: #c8b98e;
+  --color-line: #9d9488;
+  --color-text-muted: #685f58;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-background-alt: var(--color-background-alt);
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --color-gold: var(--color-gold);
+  --color-gold-muted: var(--color-gold-muted);
+  --color-line: var(--color-line);
+  --color-text-muted: var(--color-text-muted);
+
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+  --font-script: var(--font-script);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  background: var(--color-background);
+}
+
+body {
+  position: relative;
+  background-color: var(--color-background);
+  background-image:
+    radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.8), transparent 20%),
+    radial-gradient(circle at 85% 18%, rgba(173, 152, 98, 0.12), transparent 18%),
+    radial-gradient(circle at 50% 80%, rgba(112, 100, 87, 0.08), transparent 22%),
+    linear-gradient(180deg, #f9f3ea 0%, #f2e8d9 34%, #eadcc4 100%);
+  color: var(--color-ink);
+  font-family: var(--font-serif), serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(70, 60, 52, 0.025),
+      rgba(70, 60, 52, 0.025) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.055) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-cream);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.tracking-widest-2 {
+  letter-spacing: 0.28em;
+}
+
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-line) 25%,
+    var(--color-line) 75%,
+    transparent
+  );
+}
+
+.hairline-v {
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-line) 10%,
+    var(--color-line) 90%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
