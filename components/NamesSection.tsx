@@ -6,9 +6,9 @@ import { Reveal } from "@/components/Reveal";
 
 export function NamesSection({ guestName }: { guestName?: string }) {
   return (
-    <section className="relative flex flex-col items-center px-6 pb-16 pt-20 text-center">
+    <section className="relative z-10 flex flex-col items-center px-6 pb-16 pt-20 text-center">
       <Reveal>
-        <p className="text-[11px] uppercase tracking-widest-2 text-gold">
+        <p className="text-[11px] uppercase tracking-widest-2 text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.35)]">
           {guestName ? `Dear ${guestName},` : "Save the Date"}
         </p>
       </Reveal>
@@ -19,7 +19,7 @@ export function NamesSection({ guestName }: { guestName?: string }) {
 
       <Reveal delay={0.15} y={24}>
         <h1 className="mt-8 font-script text-7xl leading-[0.95] text-ink sm:text-8xl">
-          {EVENT.brideName}
+          {EVENT.groomName}
         </h1>
       </Reveal>
 
@@ -29,7 +29,7 @@ export function NamesSection({ guestName }: { guestName?: string }) {
 
       <Reveal delay={0.3} y={24}>
         <h1 className="font-script text-7xl leading-[0.95] text-ink sm:text-8xl">
-          {EVENT.groomName}
+          {EVENT.brideName}
         </h1>
       </Reveal>
 

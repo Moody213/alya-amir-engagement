@@ -9,7 +9,7 @@
 export const EVENT = {
   brideName: "Alya",
   groomName: "Amir",
-  coupleShortName: "Alya & Amir",
+  coupleShortName: "Amir & Alya",
   eventType: "Engagement",
 
   /** ISO date of the event (used by the countdown & calendar). */
@@ -29,19 +29,19 @@ export const EVENT = {
   dateDisplay: {
     weekday: "Thursday",
     day: "19",
-    month: "November",
+    month: "Nov",
     year: "2026",
   },
 
   /** EDITABLE: replace with the real venue name once confirmed. */
-  venueName: "Venue details coming soon",
+  venueName: "AZHA NEW CAIRO",
   /** EDITABLE: replace with the real venue address once confirmed. */
-  venueAddress: "Address to be announced",
+  //venueAddress: "Address to be announced",
   mapsUrl: "https://maps.app.goo.gl/Njx8Eufth3hmWqjs6?g_st=ic",
 
   invitationLines: [
     "Together with their families,",
-    "Alya & Amir",
+    "Amir & Alya",
     "request the pleasure of your company",
     "as they celebrate their engagement.",
   ],

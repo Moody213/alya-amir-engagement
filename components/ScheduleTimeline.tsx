@@ -26,7 +26,7 @@ export function ScheduleTimeline() {
                     <Icon className="h-5 w-5 text-gold" strokeWidth={1.25} aria-hidden="true" />
                   </div>
                   <div className="pt-1">
-                    <p className="text-[11px] uppercase tracking-widest-2 text-gold">
+                    <p className="text-[11px] uppercase tracking-widest-2 text-ink/80 [text-shadow:0_1px_2px_rgba(253,250,244,0.6)]">
                       {item.time}
                     </p>
                     <h3 className="mt-1 font-display text-xl text-ink">

@@ -25,7 +25,7 @@ const script = Parisienne({
 
 export const metadata: Metadata = {
   title: `${EVENT.coupleShortName} — ${EVENT.eventType}`,
-  description: `Join ${EVENT.brideName} & ${EVENT.groomName} as they celebrate their engagement.`,
+  description: `Join ${EVENT.groomName} & ${EVENT.brideName} as they celebrate their engagement.`,
 };
 
 export const viewport: Viewport = {

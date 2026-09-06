@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { EVENT } from "@/lib/config";
 import { Ornament } from "@/components/Ornament";
@@ -12,6 +13,17 @@ type InvitationHeroProps = {
 
 export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroProps) {
   const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (isOpened) return;
+
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = overflow;
+    };
+  }, [isOpened]);
 
   return (
     <AnimatePresence>
@@ -47,9 +59,9 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
               animate={
                 shouldReduceMotion
                   ? {}
-                  : { opacity: [1, 0.7, 1] }
+                  : { scale: [1, 1.06, 1] }
               }
-              transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
               aria-label="Tap to open your invitation"
             >
               <span className="sr-only">Tap to open your invitation</span>
@@ -87,11 +99,11 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
 
             <div className="mt-2 space-y-1">
               <p className="font-script text-6xl leading-none text-ink">
-                {EVENT.brideName}
+                {EVENT.groomName}
               </p>
               <p className="font-script text-3xl text-gold">&amp;</p>
               <p className="font-script text-6xl leading-none text-ink">
-                {EVENT.groomName}
+                {EVENT.brideName}
               </p>
             </div>
 

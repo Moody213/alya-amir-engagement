@@ -12,7 +12,7 @@ export function VenueSection() {
       </Reveal>
 
       <Reveal delay={0.1}>
-        <div className="mx-auto mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-gold">
+        <div className="mx-auto mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-gold bg-background-alt">
           <MapPin className="h-5 w-5 text-gold" strokeWidth={1.25} aria-hidden="true" />
         </div>
       </Reveal>

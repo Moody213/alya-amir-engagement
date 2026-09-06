@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="flex flex-col items-center gap-4 px-6 pb-14 pt-6 text-center">
       <Ornament className="h-4 w-24 text-gold-muted" />
       <p className="font-script text-3xl text-ink">
-        {EVENT.brideName} &amp; {EVENT.groomName}
+        {EVENT.groomName} &amp; {EVENT.brideName}
       </p>
       <p className="text-[11px] uppercase tracking-widest-2 text-text-muted">
         {EVENT.dateDisplay.weekday}, {EVENT.dateDisplay.day} {EVENT.dateDisplay.month}{" "}

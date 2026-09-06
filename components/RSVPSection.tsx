@@ -78,7 +78,7 @@ export function RSVPSection({
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col items-center gap-4 border border-gold-muted bg-background-alt/60 px-6 py-10"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold bg-background-alt">
                 {attendance === "YES" ? (
                   <Check className="h-5 w-5 text-gold" strokeWidth={1.5} />
                 ) : (

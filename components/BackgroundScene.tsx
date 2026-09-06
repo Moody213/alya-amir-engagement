@@ -1,0 +1,16 @@
+import Image from "next/image";
+
+export function BackgroundScene() {
+  return (
+    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      <Image
+        src="/background.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-top"
+      />
+    </div>
+  );
+}

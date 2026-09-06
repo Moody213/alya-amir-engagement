@@ -25,7 +25,7 @@ export function Ornament({ className = "" }: { className?: string }) {
 
 export function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[11px] tracking-widest-2 uppercase text-gold font-medium text-center">
+    <p className="text-[11px] tracking-widest-2 uppercase text-ink font-medium text-center [text-shadow:0_1px_2px_rgba(253,250,244,0.6)]">
       {children}
     </p>
   );
