@@ -29,6 +29,7 @@ export function Reveal({ children, className, delay = 0, y = 18 }: RevealProps) 
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={variants}
+      suppressHydrationWarning
     >
       {children}
     </motion.div>
@@ -54,6 +55,7 @@ export function RevealStagger({
         hidden: {},
         visible: { transition: { staggerChildren: staggerDelay } },
       }}
+      suppressHydrationWarning
     >
       {children}
     </motion.div>
@@ -81,6 +83,7 @@ export function RevealItem({
           transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
         },
       }}
+      suppressHydrationWarning
     >
       {children}
     </motion.div>

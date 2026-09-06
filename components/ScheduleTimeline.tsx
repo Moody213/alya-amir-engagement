@@ -7,7 +7,7 @@ const ICONS = [Sparkle, Gem, UtensilsCrossed, Moon];
 
 export function ScheduleTimeline() {
   return (
-    <section className="px-6 py-16">
+    <section className="px-6 pt-6 pb-16">
       <Reveal className="text-center">
         <SectionEyebrow>Order of the Evening</SectionEyebrow>
         <h2 className="mt-3 font-display text-3xl text-ink">The Schedule</h2>
@@ -25,8 +25,8 @@ export function ScheduleTimeline() {
                   <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold bg-background-alt sm:h-14 sm:w-14">
                     <Icon className="h-5 w-5 text-gold" strokeWidth={1.25} aria-hidden="true" />
                   </div>
-                  <div className="pt-1">
-                    <p className="text-[11px] uppercase tracking-widest-2 text-ink/80 [text-shadow:0_1px_2px_rgba(253,250,244,0.6)]">
+                  <div className="mt-1 rounded-md bg-background-alt/80 px-4 py-3 backdrop-blur-[1px]">
+                    <p className="text-[11px] uppercase tracking-widest-2 text-ink/80">
                       {item.time}
                     </p>
                     <h3 className="mt-1 font-display text-xl text-ink">

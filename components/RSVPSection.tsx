@@ -59,7 +59,7 @@ export function RSVPSection({
   }
 
   return (
-    <section id="rsvp" className="mx-auto max-w-md px-8 py-16 text-center">
+    <section id="rsvp" className="mx-auto max-w-md px-8 pt-28 pb-16 text-center">
       <Reveal>
         <SectionEyebrow>Kindly Reply</SectionEyebrow>
         <h2 className="mt-3 font-display text-3xl text-ink">RSVP</h2>
@@ -77,6 +77,7 @@ export function RSVPSection({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col items-center gap-4 border border-gold-muted bg-background-alt/60 px-6 py-10"
+              suppressHydrationWarning
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold bg-background-alt">
                 {attendance === "YES" ? (
@@ -100,6 +101,7 @@ export function RSVPSection({
               onSubmit={handleSubmit}
               noValidate
               className="flex flex-col gap-6 text-left"
+              suppressHydrationWarning
             >
               <div>
                 <label

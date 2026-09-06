@@ -44,6 +44,7 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col items-center gap-6"
+            suppressHydrationWarning
           >
             <p className="text-[11px] tracking-widest-2 uppercase text-gold">
               {guestName ? `An invitation for ${guestName}` : "You are invited"}
@@ -70,6 +71,7 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 className="relative"
+                suppressHydrationWarning
               >
                 <svg
                   width="120"

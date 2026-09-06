@@ -8,7 +8,7 @@ export function BackgroundScene() {
         alt=""
         fill
         priority
-        sizes="100vw"
+        sizes="(min-width: 672px) 672px, 100vw"
         className="object-cover object-top"
       />
     </div>
