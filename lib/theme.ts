@@ -24,7 +24,7 @@ export const THEME = {
   },
 
   namesSection: {
-    paddingTop: "80px",
+    paddingTop: "44px",
     paddingBottom: "4px",
     eyebrow: { fontSize: "11px", color: "var(--color-cream)" },
     names: { fontSize: "56px", color: "var(--color-ink)" },
