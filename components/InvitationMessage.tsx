@@ -15,7 +15,7 @@ export function InvitationMessage() {
           style={{ fontSize: t.text.fontSize, color: t.text.color }}
         >
           {EVENT.invitationLines.map((line, i) => (
-            <span key={i} className="block text-gold mb-2 bg-background p-2 rounded-4xl">
+            <span key={i} className="block text-gold mb-2 bg-background-alt/65 p-2 rounded-4xl">
               {line}
             </span>
           ))}
