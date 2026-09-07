@@ -39,7 +39,7 @@ export const THEME = {
   },
 
   dateSection: {
-    top: "38%",
+    top: "69%",
     left: "50%",
     weekday: { fontSize: "15px", color: "var(--color-ink)" },
     day: { fontSize: "34px", color: "var(--color-ink)" },
@@ -73,7 +73,7 @@ export const THEME = {
   },
 
   countdown: {
-    paddingTop: "64px",
+    paddingTop: "160px",
     paddingBottom: "64px",
     eyebrow: { fontSize: "11px", color: "var(--color-ink)" },
     unitValue: { fontSize: "24px", color: "var(--color-ink)" },

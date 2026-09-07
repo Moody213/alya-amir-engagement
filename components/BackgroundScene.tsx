@@ -4,7 +4,7 @@ export function BackgroundScene() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
       <Image
-        src="/background.webp"
+        src="/background-top.webp"
         alt=""
         fill
         priority

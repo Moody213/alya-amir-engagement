@@ -35,7 +35,7 @@ export function InvitationExperience({
       />
 
       <main className="mx-auto max-w-2xl">
-        <div className="relative aspect-[1731/9857] w-full">
+        <div className="relative aspect-[1731/5450] w-full">
           <BackgroundScene />
           <NamesSection guestName={guestName} />
           <InvitationMessage />
