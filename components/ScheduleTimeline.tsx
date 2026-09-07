@@ -1,16 +1,26 @@
 import { Sparkle, Gem, UtensilsCrossed, Moon } from "lucide-react";
 import { SCHEDULE } from "@/lib/config";
+import { THEME } from "@/lib/theme";
 import { Reveal } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/Ornament";
 
 const ICONS = [Sparkle, Gem, UtensilsCrossed, Moon];
 
 export function ScheduleTimeline() {
+  const t = THEME.scheduleTimeline;
   return (
-    <section className="px-6 pt-6 pb-16">
+    <section
+      className="px-6"
+      style={{ paddingTop: t.paddingTop, paddingBottom: t.paddingBottom }}
+    >
       <Reveal className="text-center">
-        <SectionEyebrow>Order of the Evening</SectionEyebrow>
-        <h2 className="mt-3 font-display text-3xl text-ink">The Schedule</h2>
+        <SectionEyebrow style={t.eyebrow}>Order of the Evening</SectionEyebrow>
+        <h2
+          className="mt-3 font-display"
+          style={{ fontSize: t.heading.fontSize, color: t.heading.color }}
+        >
+          The Schedule
+        </h2>
       </Reveal>
 
       <div className="relative mx-auto mt-14 max-w-sm">
@@ -26,14 +36,26 @@ export function ScheduleTimeline() {
                     <Icon className="h-5 w-5 text-gold" strokeWidth={1.25} aria-hidden="true" />
                   </div>
                   <div className="mt-1 rounded-md bg-background-alt/80 px-4 py-3 backdrop-blur-[1px]">
-                    <p className="text-[11px] uppercase tracking-widest-2 text-ink/80">
+                    <p
+                      className="uppercase tracking-widest-2"
+                      style={{ fontSize: t.itemTime.fontSize, color: t.itemTime.color }}
+                    >
                       {item.time}
                     </p>
-                    <h3 className="mt-1 font-display text-xl text-ink">
+                    <h3
+                      className="mt-1 font-display"
+                      style={{ fontSize: t.itemTitle.fontSize, color: t.itemTitle.color }}
+                    >
                       {item.title}
                     </h3>
                     {item.description && (
-                      <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                      <p
+                        className="mt-2 leading-relaxed"
+                        style={{
+                          fontSize: t.itemDescription.fontSize,
+                          color: t.itemDescription.color,
+                        }}
+                      >
                         {item.description}
                       </p>
                     )}

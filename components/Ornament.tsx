@@ -1,3 +1,5 @@
+import type { ReactNode, CSSProperties } from "react";
+
 export function Ornament({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -23,9 +25,18 @@ export function Ornament({ className = "" }: { className?: string }) {
   );
 }
 
-export function SectionEyebrow({ children }: { children: React.ReactNode }) {
+export function SectionEyebrow({
+  children,
+  style,
+}: {
+  children: ReactNode;
+  style?: CSSProperties;
+}) {
   return (
-    <p className="text-[11px] tracking-widest-2 uppercase text-ink font-medium text-center [text-shadow:0_1px_2px_rgba(253,250,244,0.6)]">
+    <p
+      className="tracking-widest-2 uppercase font-medium text-center [text-shadow:0_1px_2px_rgba(253,250,244,0.6)]"
+      style={{ fontSize: "11px", color: "var(--color-ink)", ...style }}
+    >
       {children}
     </p>
   );

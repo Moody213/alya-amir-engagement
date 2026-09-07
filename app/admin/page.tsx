@@ -5,31 +5,17 @@ import { Check, X, Loader2, Lock } from "lucide-react";
 import { EVENT, ADMIN_CONFIG } from "@/lib/config";
 import { fetchRsvpStats, type RsvpStats } from "@/lib/rsvp";
 
-const SESSION_KEY = "alya-amir-admin-unlocked";
-
 export default function AdminPage() {
+  // Intentionally not persisted (sessionStorage, cookies, etc.) — the
+  // passcode is required on every visit/reload, not just once per
+  // browser session.
   const [unlocked, setUnlocked] = useState(false);
   const [passcode, setPasscode] = useState("");
   const [authError, setAuthError] = useState("");
 
-  // Reads browser-only sessionStorage after mount; SSR always starts
-  // locked, so this is a genuine sync-with-external-system effect,
-  // not state derivable during render.
-  useEffect(() => {
-    try {
-      if (window.sessionStorage.getItem(SESSION_KEY) === "true") {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setUnlocked(true);
-      }
-    } catch {
-      // sessionStorage unavailable (private mode, etc.) — stay locked.
-    }
-  }, []);
-
   function handleUnlock(e: FormEvent) {
     e.preventDefault();
     if (passcode === ADMIN_CONFIG.passcode) {
-      window.sessionStorage.setItem(SESSION_KEY, "true");
       setUnlocked(true);
       setAuthError("");
     } else {

@@ -21,7 +21,7 @@ export function getGoogleCalendarUrl(): string {
     text: EVENT_TITLE,
     dates: `${toUtcStamp(start)}/${toUtcStamp(end)}`,
     details: EVENT_DESCRIPTION,
-    location: EVENT.venueName === "Venue details coming soon" ? "" : EVENT.venueName,
+    location: EVENT.venueName,
   });
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
@@ -42,7 +42,7 @@ export function buildIcsFile(): string {
     `DTEND:${toUtcStamp(end)}`,
     `SUMMARY:${EVENT_TITLE}`,
     `DESCRIPTION:${EVENT_DESCRIPTION}`,
-    `LOCATION:${EVENT.venueName === "Venue details coming soon" ? "" : EVENT.venueName}`,
+    `LOCATION:${EVENT.venueName}`,
     "END:VEVENT",
     "END:VCALENDAR",
   ];

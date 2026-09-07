@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { THEME } from "@/lib/theme";
 import { InvitationHero } from "@/components/InvitationHero";
 import { BackgroundScene } from "@/components/BackgroundScene";
 import { NamesSection } from "@/components/NamesSection";
@@ -44,7 +45,10 @@ export function InvitationExperience({
 
         {/* Pulled up to overlap the lower (gold parchment) portion of the
             background art instead of leaving a big empty gap below it. */}
-        <div className="relative z-10" style={{ marginTop: "-140%" }}>
+        <div
+          className="relative z-10"
+          style={{ marginTop: `${THEME.overlayPullUpPercent}%` }}
+        >
           <ScheduleTimeline />
           <div className="mx-auto hairline w-24" />
           <RSVPSection defaultGuestName={guestName} guestToken={guestToken} />

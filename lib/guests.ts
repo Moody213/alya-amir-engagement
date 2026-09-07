@@ -19,7 +19,7 @@ export type Guest = {
 };
 
 const GUEST_LIST: Guest[] = [
-  // { slug: "ahmed", guestName: "Ahmed Mohamed", token: "ahmed-001" },
+ // { slug: "Ahmed", guestName: "ahmed mohamed", token: "ahmed-001" },
 ];
 
 export function getGuestBySlug(slug: string): Guest | null {

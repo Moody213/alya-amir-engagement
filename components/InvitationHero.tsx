@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { EVENT } from "@/lib/config";
+import { THEME } from "@/lib/theme";
 import { Ornament } from "@/components/Ornament";
 
 type InvitationHeroProps = {
@@ -13,6 +14,7 @@ type InvitationHeroProps = {
 
 export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroProps) {
   const shouldReduceMotion = useReducedMotion();
+  const t = THEME.hero;
 
   useEffect(() => {
     if (isOpened) return;
@@ -46,7 +48,10 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
             className="flex flex-col items-center gap-6"
             suppressHydrationWarning
           >
-            <p className="text-[11px] tracking-widest-2 uppercase text-gold">
+            <p
+              className="tracking-widest-2 uppercase"
+              style={{ fontSize: t.eyebrow.fontSize, color: t.eyebrow.color }}
+            >
               {guestName ? `An invitation for ${guestName}` : "You are invited"}
             </p>
 
@@ -100,16 +105,30 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
             </motion.button>
 
             <div className="mt-2 space-y-1">
-              <p className="font-script text-6xl leading-none text-ink">
+              <p
+                className="font-script leading-none"
+                style={{ fontSize: t.names.fontSize, color: t.names.color }}
+              >
                 {EVENT.groomName}
               </p>
-              <p className="font-script text-3xl text-gold">&amp;</p>
-              <p className="font-script text-6xl leading-none text-ink">
+              <p
+                className="font-script"
+                style={{ fontSize: t.ampersand.fontSize, color: t.ampersand.color }}
+              >
+                &amp;
+              </p>
+              <p
+                className="font-script leading-none"
+                style={{ fontSize: t.names.fontSize, color: t.names.color }}
+              >
                 {EVENT.brideName}
               </p>
             </div>
 
-            <p className="mt-1 text-xs uppercase tracking-widest-2 text-text-muted">
+            <p
+              className="mt-1 uppercase tracking-widest-2"
+              style={{ fontSize: t.dateLine.fontSize, color: t.dateLine.color }}
+            >
               {EVENT.dateDisplay.weekday}, {EVENT.dateDisplay.day}{" "}
               {EVENT.dateDisplay.month} {EVENT.dateDisplay.year}
             </p>

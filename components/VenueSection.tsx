@@ -1,14 +1,19 @@
 import { MapPin } from "lucide-react";
 import { EVENT } from "@/lib/config";
+import { THEME } from "@/lib/theme";
 import { Reveal } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/Ornament";
 import { CalendarButton } from "@/components/CalendarButton";
 
 export function VenueSection() {
+  const t = THEME.venueSection;
   return (
-    <section className="mx-auto max-w-md px-8 py-16 text-center">
+    <section
+      className="mx-auto max-w-md px-8 text-center"
+      style={{ paddingTop: t.paddingTop, paddingBottom: t.paddingBottom }}
+    >
       <Reveal>
-        <SectionEyebrow>Where We Celebrate</SectionEyebrow>
+        <SectionEyebrow style={t.eyebrow}>Where We Celebrate</SectionEyebrow>
       </Reveal>
 
       <Reveal delay={0.1}>
@@ -18,8 +23,12 @@ export function VenueSection() {
       </Reveal>
 
       <Reveal delay={0.15}>
-        <h3 className="mt-6 font-display text-2xl text-ink">{EVENT.venueName}</h3>
-        <p className="mt-2 text-sm text-text-muted">{EVENT.venueAddress}</p>
+        <h3
+          className="mt-6 font-display"
+          style={{ fontSize: t.venueName.fontSize, color: t.venueName.color }}
+        >
+          {EVENT.venueName}
+        </h3>
       </Reveal>
 
       <Reveal delay={0.25}>

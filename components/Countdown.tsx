@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { EVENT } from "@/lib/config";
+import { THEME } from "@/lib/theme";
 import { Reveal, RevealStagger, RevealItem } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/Ornament";
 
@@ -56,10 +57,15 @@ export function Countdown() {
       ]
     : [];
 
+  const t = THEME.countdown;
+
   return (
-    <section className="px-6 py-16 text-center">
+    <section
+      className="px-6 text-center"
+      style={{ paddingTop: t.paddingTop, paddingBottom: t.paddingBottom }}
+    >
       <Reveal>
-        <SectionEyebrow>Counting Down</SectionEyebrow>
+        <SectionEyebrow style={t.eyebrow}>Counting Down</SectionEyebrow>
       </Reveal>
 
       {hasArrived ? (
@@ -74,12 +80,16 @@ export function Countdown() {
             <RevealItem key={unit.label}>
               <div className="flex flex-col items-center rounded-full border border-gold-muted/70 bg-background-alt/60 px-1 py-4 sm:px-2">
                 <span
-                  className="font-display text-2xl tabular-nums text-ink sm:text-3xl"
+                  className="font-display tabular-nums"
+                  style={{ fontSize: t.unitValue.fontSize, color: t.unitValue.color }}
                   aria-hidden="true"
                 >
                   {String(unit.value).padStart(2, "0")}
                 </span>
-                <span className="mt-1 text-[9px] uppercase tracking-widest-2 text-text-muted sm:text-[10px]">
+                <span
+                  className="mt-1 uppercase tracking-widest-2"
+                  style={{ fontSize: t.unitLabel.fontSize, color: t.unitLabel.color }}
+                >
                   {unit.label}
                 </span>
               </div>

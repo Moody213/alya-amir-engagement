@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, X, Loader2 } from "lucide-react";
 import { submitRsvp, type Attendance } from "@/lib/rsvp";
+import { THEME } from "@/lib/theme";
 import { Reveal } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/Ornament";
 
@@ -58,12 +59,26 @@ export function RSVPSection({
     }
   }
 
+  const t = THEME.rsvpSection;
+
   return (
-    <section id="rsvp" className="mx-auto max-w-md px-8 pt-28 pb-16 text-center">
+    <section
+      id="rsvp"
+      className="mx-auto max-w-md px-8 text-center"
+      style={{ paddingTop: t.paddingTop, paddingBottom: t.paddingBottom }}
+    >
       <Reveal>
-        <SectionEyebrow>Kindly Reply</SectionEyebrow>
-        <h2 className="mt-3 font-display text-3xl text-ink">RSVP</h2>
-        <p className="mt-3 text-sm text-text-muted">
+        <SectionEyebrow style={t.eyebrow}>Kindly Reply</SectionEyebrow>
+        <h2
+          className="mt-3 font-display"
+          style={{ fontSize: t.heading.fontSize, color: t.heading.color }}
+        >
+          RSVP
+        </h2>
+        <p
+          className="mt-3"
+          style={{ fontSize: t.subtext.fontSize, color: t.subtext.color }}
+        >
           Kindly confirm your attendance.
         </p>
       </Reveal>
