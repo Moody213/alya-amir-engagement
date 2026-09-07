@@ -30,11 +30,32 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
   useEffect(() => {
     if (isOpened) return;
 
-    const { overflow } = document.body.style;
+    // `overflow: hidden` on body alone doesn't stop touch-scrolling on iOS
+    // Safari (it still rubber-bands the page behind this fixed overlay), so
+    // pin body in place as well while the gate is up.
+    const scrollY = window.scrollY;
+    const html = document.documentElement;
+    const { overflow: bodyOverflow, position, top, left, right, width } =
+      document.body.style;
+    const { overflow: htmlOverflow } = html.style;
+
+    html.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
 
     return () => {
-      document.body.style.overflow = overflow;
+      html.style.overflow = htmlOverflow;
+      document.body.style.overflow = bodyOverflow;
+      document.body.style.position = position;
+      document.body.style.top = top;
+      document.body.style.left = left;
+      document.body.style.right = right;
+      document.body.style.width = width;
+      window.scrollTo(0, scrollY);
     };
   }, [isOpened]);
 
@@ -64,7 +85,7 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
     <AnimatePresence>
       {!isOpened && (
         <motion.div
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background px-6 text-center"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center overscroll-none bg-background px-6 text-center [touch-action:none]"
           exit={{
             opacity: 0,
             scale: shouldReduceMotion ? 1 : 1.04,

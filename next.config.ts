@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   // `http://192.168.x.x:3000`). Without this, Next.js blocks the dev-only
   // HMR/runtime requests from any origin other than localhost, which breaks
   // client-side hydration entirely (page loads, but nothing is interactive).
-  allowedDevOrigins: ["192.168.1.52"],
+  allowedDevOrigins: ["192.168.1.52", "192.168.1.12", "*.ngrok-free.app"],
 };
 
 export default nextConfig;

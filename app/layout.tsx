@@ -26,6 +26,9 @@ const script = Parisienne({
 export const metadata: Metadata = {
   title: `${EVENT.coupleShortName} — ${EVENT.eventType}`,
   description: `Join ${EVENT.groomName} & ${EVENT.brideName} as they celebrate their engagement.`,
+  other: {
+    google: "notranslate",
+  },
 };
 
 export const viewport: Viewport = {
@@ -38,7 +41,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" translate="no" className="notranslate">
       <body
         className={`${display.variable} ${serif.variable} ${script.variable} antialiased`}
       >
