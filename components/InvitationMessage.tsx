@@ -11,7 +11,7 @@ export function InvitationMessage() {
     >
       <Reveal delay={0.15}>
         <p
-          className="font-display italic leading-relaxed tracking-wide"
+          className="mx-auto max-w-70 font-display italic leading-relaxed tracking-wide sm:max-w-none"
           style={{ fontSize: t.text.fontSize, color: t.text.color }}
         >
           {EVENT.invitationLines.map((line, i) => (
