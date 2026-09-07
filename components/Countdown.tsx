@@ -78,7 +78,7 @@ export function Countdown() {
         <RevealStagger className="mx-auto mt-8 grid max-w-sm grid-cols-4 gap-2 sm:gap-4">
           {units.map((unit) => (
             <RevealItem key={unit.label}>
-              <div className="flex flex-col items-center rounded-full border border-gold-muted/70 bg-background-alt/60 px-1 py-4 sm:px-2">
+              <div className="flex flex-col items-center rounded-full border border-gold-muted/70 bg-background-alt/85 px-1 py-4 shadow-sm sm:px-2">
                 <span
                   className="font-display tabular-nums"
                   style={{ fontSize: t.unitValue.fontSize, color: t.unitValue.color }}

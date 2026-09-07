@@ -111,12 +111,22 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
 
             <Ornament className="h-4 w-24 text-gold-muted" />
 
+            
+            <motion.p
+              className="-mt-1 text-[20px] uppercase tracking-widest-2 text-text-muted"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: phase === "idle" ? 1 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              Tap to open
+            </motion.p>
+
             <motion.button
               ref={envelopeRef}
               type="button"
               onClick={handleTap}
               suppressHydrationWarning
-              className="group relative mt-2 flex cursor-pointer items-center justify-center rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="group text-base text-black relative mt-2 flex cursor-pointer items-center justify-center rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               animate={
                 shouldReduceMotion || phase !== "idle"
                   ? {}
@@ -125,7 +135,7 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
               transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
               aria-label="Tap to open your invitation"
             >
-              <span className="sr-only">Tap to open your invitation</span>
+              <span className="sr-only text-base text-ink">Tap to open your invitation</span>
               <motion.div
                 initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -188,6 +198,7 @@ export function InvitationHero({ isOpened, onOpen, guestName }: InvitationHeroPr
                 />
               </motion.div>
             </motion.button>
+
 
             <div className="mt-2 space-y-1">
               <p

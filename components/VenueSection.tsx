@@ -24,7 +24,7 @@ export function VenueSection() {
 
       <Reveal delay={0.15}>
         <h3
-          className="mt-6 font-display"
+          className="on-art mt-6 font-display"
           style={{ fontSize: t.venueName.fontSize, color: t.venueName.color }}
         >
           {EVENT.venueName}
@@ -37,7 +37,7 @@ export function VenueSection() {
             href={EVENT.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-ink px-8 py-3 text-xs uppercase tracking-widest-2 text-ink transition-colors hover:bg-ink hover:text-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="inline-flex items-center gap-2 border border-ink bg-background-alt/70 px-8 py-3 text-xs uppercase tracking-widest-2 text-ink backdrop-blur-[1px] transition-colors hover:bg-ink hover:text-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             View Location
           </a>

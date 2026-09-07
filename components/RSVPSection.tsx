@@ -70,13 +70,13 @@ export function RSVPSection({
       <Reveal>
         <SectionEyebrow style={t.eyebrow}>Kindly Reply</SectionEyebrow>
         <h2
-          className="mt-3 font-display"
+          className="on-art mt-3 font-display"
           style={{ fontSize: t.heading.fontSize, color: t.heading.color }}
         >
           RSVP
         </h2>
         <p
-          className="mt-3"
+          className="on-art mt-3"
           style={{ fontSize: t.subtext.fontSize, color: t.subtext.color }}
         >
           Kindly confirm your attendance.
@@ -91,7 +91,7 @@ export function RSVPSection({
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col items-center gap-4 border border-gold-muted bg-background-alt/60 px-6 py-10"
+              className="flex flex-col items-center gap-4 rounded-xl border border-gold-muted bg-background-alt/85 px-6 py-10 shadow-sm backdrop-blur-[1px]"
               suppressHydrationWarning
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold bg-background-alt">
@@ -115,7 +115,7 @@ export function RSVPSection({
               exit={{ opacity: 0 }}
               onSubmit={handleSubmit}
               noValidate
-              className="flex flex-col gap-6 text-left"
+              className="flex flex-col gap-6 rounded-xl bg-background-alt/80 p-6 text-left shadow-sm backdrop-blur-[1px]"
               suppressHydrationWarning
             >
               <div>
@@ -138,7 +138,7 @@ export function RSVPSection({
                   aria-invalid={Boolean(nameError)}
                   aria-describedby={nameError ? "guestName-error" : undefined}
                   suppressHydrationWarning
-                  className="mt-2 w-full border-0 border-b border-line bg-transparent py-2 font-serif text-lg text-ink placeholder:text-text-muted/60 focus:border-gold focus:outline-none"
+                  className="mt-2 w-full rounded-xl border border-line bg-cream px-3 py-2 font-serif text-lg text-ink placeholder:text-text-muted/60 focus:border-gold focus:outline-none"
                   placeholder="Full name"
                 />
                 {nameError && (
@@ -176,7 +176,7 @@ export function RSVPSection({
                 type="submit"
                 disabled={isSubmitting}
                 suppressHydrationWarning
-                className="mt-2 flex items-center justify-center gap-2 border border-ink py-3 text-xs uppercase tracking-widest-2 text-ink transition-colors hover:bg-ink hover:text-cream disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="mt-2 flex items-center rounded-xl justify-center gap-2 border border-ink py-3 text-xs uppercase tracking-widest-2 text-ink transition-colors hover:bg-ink hover:text-cream disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {isSubmitting && (
                   <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
@@ -206,10 +206,10 @@ function AttendanceOption({
       onClick={onSelect}
       aria-pressed={selected}
       suppressHydrationWarning
-      className={`flex items-center justify-between border px-5 py-3 text-left text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+      className={`flex items-center rounded-xl justify-between border px-5 py-3 text-left text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
         selected
-          ? "border-gold bg-gold/10 text-ink"
-          : "border-line text-text-muted hover:border-gold-muted"
+          ? "border-gold bg-gold/15 text-ink"
+          : "border-line bg-cream text-text-muted hover:border-gold-muted"
       }`}
     >
       <span className="uppercase tracking-wider">{label}</span>

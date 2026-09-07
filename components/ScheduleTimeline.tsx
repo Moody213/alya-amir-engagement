@@ -16,7 +16,7 @@ export function ScheduleTimeline() {
       <Reveal className="text-center">
         <SectionEyebrow style={t.eyebrow}>Order of the Evening</SectionEyebrow>
         <h2
-          className="mt-3 font-display"
+          className="on-art mt-3 font-display"
           style={{ fontSize: t.heading.fontSize, color: t.heading.color }}
         >
           The Schedule

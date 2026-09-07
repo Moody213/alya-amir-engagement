@@ -34,7 +34,7 @@ export function SectionEyebrow({
 }) {
   return (
     <p
-      className="tracking-widest-2 uppercase font-medium text-center [text-shadow:0_1px_2px_rgba(253,250,244,0.6)]"
+      className="on-art tracking-widest-2 uppercase font-medium text-center"
       style={{ fontSize: "11px", color: "var(--color-ink)", ...style }}
     >
       {children}

@@ -15,7 +15,7 @@ export function CalendarButton() {
         aria-expanded={open}
         aria-haspopup="true"
         suppressHydrationWarning
-        className="inline-flex items-center gap-2 text-xs uppercase tracking-widest-2 text-gold underline decoration-gold-muted underline-offset-4 transition-colors hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className="on-art inline-flex items-center gap-2 text-xs uppercase tracking-widest-2 text-ink underline decoration-gold underline-offset-4 transition-colors hover:text-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         <CalendarPlus className="h-4 w-4" strokeWidth={1.25} aria-hidden="true" />
         Add to Calendar
