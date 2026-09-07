@@ -36,7 +36,7 @@ export function NamesSection({ guestName }: { guestName?: string }) {
 
       <Reveal delay={0.25}>
         <p
-          className="my-3 font-script"
+          className="my-0 font-script leading-none"
           style={{ fontSize: t.ampersand.fontSize, color: t.ampersand.color }}
         >
           &amp;
@@ -54,8 +54,8 @@ export function NamesSection({ guestName }: { guestName?: string }) {
 
       <Reveal delay={0.45}>
         <p
-          className="mt-10 font-display uppercase text-gold bg-background-alt/65 px-4 py-2 rounded-4xl tracking-widest-2"
-          style={{ fontSize: t.eventType.fontSize }}
+          className="mt-6 font-display uppercase tracking-widest-2"
+          style={{ fontSize: t.eventType.fontSize, color: t.eventType.color }}
         >
           {EVENT.eventType}
         </p>

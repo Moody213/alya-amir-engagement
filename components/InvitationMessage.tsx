@@ -11,11 +11,11 @@ export function InvitationMessage() {
     >
       <Reveal delay={0.15}>
         <p
-          className="font-display italic leading-relaxed"
+          className="font-display italic leading-relaxed tracking-wide"
           style={{ fontSize: t.text.fontSize, color: t.text.color }}
         >
           {EVENT.invitationLines.map((line, i) => (
-            <span key={i} className="block text-gold mb-2 bg-background-alt/65 p-2 rounded-4xl">
+            <span key={i} className="block mb-3">
               {line}
             </span>
           ))}

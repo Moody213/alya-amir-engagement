@@ -25,17 +25,17 @@ export const THEME = {
 
   namesSection: {
     paddingTop: "80px",
-    paddingBottom: "16px",
+    paddingBottom: "4px",
     eyebrow: { fontSize: "11px", color: "var(--color-cream)" },
-    names: { fontSize: "72px", color: "var(--color-ink)" },
-    ampersand: { fontSize: "30px", color: "var(--color-gold)" },
+    names: { fontSize: "56px", color: "var(--color-ink)" },
+    ampersand: { fontSize: "24px", color: "var(--color-gold)" },
     eventType: { fontSize: "14px", color: "var(--color-ink)" },
   },
 
   invitationMessage: {
     paddingTop: "0px",
     paddingBottom: "40px",
-    text: { fontSize: "16px", color: "var(--color-ink)" },
+    text: { fontSize: "18px", color: "var(--color-ink)" },
   },
 
   dateSection: {
