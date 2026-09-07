@@ -16,16 +16,6 @@
  */
 
 export const THEME = {
-  /**
-   * How far the Schedule/RSVP/Venue/Countdown block gets pulled up to
-   * overlay the lower part of the background art. It's a percentage
-   * of that block's own width (which matches the background image's
-   * width), so it stays correct on every screen size.
-   * More negative = pulled up further (covers more of the art).
-   * Less negative = smaller overlap, bigger gap below the art.
-   */
-  overlayPullUpPercent: -140,
-
   hero: {
     eyebrow: { fontSize: "11px", color: "var(--color-gold)" },
     names: { fontSize: "60px", color: "var(--color-ink)" },
@@ -49,7 +39,7 @@ export const THEME = {
   },
 
   dateSection: {
-    top: "49%",
+    top: "38%",
     left: "50%",
     weekday: { fontSize: "15px", color: "var(--color-ink)" },
     day: { fontSize: "34px", color: "var(--color-ink)" },

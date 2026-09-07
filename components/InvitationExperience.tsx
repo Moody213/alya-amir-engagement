@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { THEME } from "@/lib/theme";
 import { InvitationHero } from "@/components/InvitationHero";
 import { BackgroundScene } from "@/components/BackgroundScene";
 import { NamesSection } from "@/components/NamesSection";
@@ -36,18 +35,20 @@ export function InvitationExperience({
       />
 
       <main className="mx-auto max-w-2xl">
-        <div className="relative aspect-[1080/4779] w-full">
+        <div className="relative aspect-[1731/9857] w-full">
           <BackgroundScene />
           <NamesSection guestName={guestName} />
           <InvitationMessage />
           <DateSection />
         </div>
 
-        {/* Pulled up to overlap the lower (gold parchment) portion of the
-            background art instead of leaving a big empty gap below it. */}
+        {/* Its own background (a crop of the lower/parchment portion of the
+            art) sized with `cover`, so it always fully covers this block no
+            matter how tall the content gets on any screen — unlike a fixed
+            aspect-ratio image, `cover` can't "run out" of art. */}
         <div
-          className="relative z-10"
-          style={{ marginTop: `${THEME.overlayPullUpPercent}%` }}
+          className="relative z-10 bg-cover bg-top"
+          style={{ backgroundImage: "url(/background-lower.webp)" }}
         >
           <ScheduleTimeline />
           <div className="mx-auto hairline w-24" />
