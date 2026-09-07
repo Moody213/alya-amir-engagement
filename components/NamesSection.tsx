@@ -54,7 +54,7 @@ export function NamesSection({ guestName }: { guestName?: string }) {
 
       <Reveal delay={0.45}>
         <p
-          className="mt-10 font-display uppercase text-gold-muted tracking-widest-2"
+          className="mt-10 font-display uppercase text-gold bg-background px-4 py-2 rounded-4xl tracking-widest-2"
           style={{ fontSize: t.eventType.fontSize }}
         >
           {EVENT.eventType}
