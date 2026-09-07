@@ -11,7 +11,7 @@ export function DateSection() {
     >
       <Reveal>
         <p
-          className="font-display uppercase tracking-[0.25em] [text-shadow:0_1px_2px_rgba(253,250,244,0.5)]"
+          className="font-display uppercase  [text-shadow:0_1px_2px_rgba(253,250,244,0.5)]"
           style={{ fontSize: t.weekday.fontSize, color: t.weekday.color }}
         >
           {EVENT.dateDisplay.weekday}

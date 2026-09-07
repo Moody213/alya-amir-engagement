@@ -37,8 +37,8 @@ export function ScheduleTimeline() {
                   </div>
                   <div className="mt-1 rounded-md bg-background-alt/80 px-4 py-3 backdrop-blur-[1px]">
                     <p
-                      className="uppercase tracking-widest-2"
-                      style={{ fontSize: t.itemTime.fontSize, color: t.itemTime.color }}
+                      className="uppercase tracking-widest-2 text-base"
+                      style={{color: t.itemTime.color }}
                     >
                       {item.time}
                     </p>
