@@ -62,25 +62,25 @@ export const SCHEDULE: ScheduleItem[] = [
   {
     id: "welcome",
     title: "Guest Arrival",
-    time: "Time to be announced",
+    time: "5:00 PM",
     description: "Arrive, settle in, and share in the excitement of the evening.",
   },
   {
     id: "ceremony",
     title: "Engagement Ceremony",
-    time: "Time to be announced",
+    time: "Starts 6:00 PM",
     description: "The exchange of rings, celebrated in the presence of family and friends.",
   },
   {
     id: "dinner",
     title: "Dinner",
-    time: "Time to be announced",
+    time: "8:00 PM",
     description: "An evening of delicious cuisine and heartfelt conversation.",
   },
   {
     id: "farewell",
     title: "End of Celebration",
-    time: "Time to be announced",
+    time: "11:00 PM",
     description: "With hearts full of gratitude, we bid farewell to a beautiful evening.",
   },
 ];
